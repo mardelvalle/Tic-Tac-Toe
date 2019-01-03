@@ -1,0 +1,44 @@
+.wrapper {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 10%;
+  align-items: center;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap:1em;
+  background: #000000;
+
+}
+.wrapper > div {
+ background: #ffffff;
+ min-height: 2em;
+ cursor: pointer;
+ text-align:  center;
+ vertical-align:  middle;
+ font-family:  "Comic Sans MS", cursive, sans-serif;
+ font-size:  5em;
+}
+table {
+  margin: auto;
+  border: 1px solid black;
+  margin-top: 3em;
+}
+
+.newGame {
+  display: flex;
+  justify-content: center;
+  height: 3em;
+  width: 40%;
+  background:	#008080;
+  color: #ffffff;
+  margin: 2em 30%;
+  cursor: pointer;
+  border: none;
+}
+
+.newGame:hover {background-color:	#008B8B}
+
+.newGame:active {
+  background-color:	#008B8B;
+  box-shadow: 0 0.5em #666;
+  transform: translateY(4px);
+}
