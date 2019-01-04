@@ -1,20 +1,23 @@
 import { writeInSquare, gameSetup } from './index.js';
 
 describe('writeInSquare', function() {
+// refresh the board
+  afterEach(function () {
+    gameSetup()
+  });
+// test if first player is x
   it('first move is X', function() {
-    // Create an element for the the test
+
     let testSquare;
 
     testSquare = document.createElement('div');
 
     writeInSquare(testSquare)
     chai.expect(testSquare.textContent).to.equal('X');
-
-    gameSetup();
   })
-
+// test if players are alternating
   it('alternates between X and O', function () {
-     // Create an element for the the test
+
      let firstSquarePlayed;
      let secondSquarePlayed
 
@@ -26,8 +29,6 @@ describe('writeInSquare', function() {
 
      chai.expect(firstSquarePlayed.textContent).to.equal('X');
      chai.expect(secondSquarePlayed.textContent).to.equal('O');
-
-     gameSetup()
    })
 
 })
