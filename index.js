@@ -21,7 +21,7 @@ function turnClick(currentDiv) {
   }
 }
 // print move
-export function writeInSquare(selectedDiv) {
+export let writeInSquare = (selectedDiv) => {
   if (whosTurn % 2 === 0) {
     selectedDiv.innerText = xPlayer;
     whosTurn++;
@@ -30,14 +30,14 @@ export function writeInSquare(selectedDiv) {
     selectedDiv.innerText = oPlayer;
     whosTurn++;
   }
-  checkIfGameComplete()
+  checkIfGameComplete();
 }
 // check if board is filled
-function checkIfGameComplete() {
+let checkIfGameComplete = () => {
   if(whosTurn === 9) {
 		// wait then clear board
 		function clearBoard() {
-			gameSetup()
+			gameSetup();
 		}
 		setTimeout(clearBoard, 1500)
   }
