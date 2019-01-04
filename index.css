@@ -17,6 +17,11 @@
  font-family:  "Comic Sans MS", cursive, sans-serif;
  font-size:  5em;
 }
+
+h4 {
+  display: none;
+}
+
 table {
   margin: auto;
   border: 1px solid black;
