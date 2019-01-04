@@ -3,7 +3,7 @@ const oPlayer = 'O';
 const boardSquares = document.querySelectorAll('.square');
 
 let whosTurn;
-
+// clear board
 gameSetup();
 
 export function gameSetup() {
@@ -13,14 +13,14 @@ export function gameSetup() {
 		boardSquares[i].addEventListener('click', turnClick, false);
 	}
 }
-
+// check if square is empty
 function turnClick(currentDiv) {
 	let selectedDiv = document.getElementById(currentDiv.target.id)
   if(selectedDiv.innerText === '') {
     writeInSquare(selectedDiv);
   }
 }
-
+// print move
 export function writeInSquare(selectedDiv) {
   if (whosTurn % 2 === 0) {
     selectedDiv.innerText = xPlayer;
@@ -32,9 +32,13 @@ export function writeInSquare(selectedDiv) {
   }
   checkIfGameComplete()
 }
-
+// check if board is filled
 function checkIfGameComplete() {
   if(whosTurn === 9) {
-		gameSetup()
+		// wait then clear board
+		function clearBoard() {
+			gameSetup()
+		}
+		setTimeout(clearBoard, 1500)
   }
 }
