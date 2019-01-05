@@ -72,7 +72,6 @@ let checkIfGameComplete = (thePlayer, playerPicks) => {
 		});
 	}
 	else {
-		console.log("ter")
 		displayCurrentPlayer()
 	}
 }
