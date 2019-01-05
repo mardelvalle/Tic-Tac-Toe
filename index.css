@@ -18,8 +18,8 @@
  font-size:  5em;
 }
 
-h4 {
-  display: none;
+h4, h2 {
+  text-align: center;
 }
 
 table {
@@ -28,7 +28,7 @@ table {
   margin-top: 3em;
 }
 
-.newGame {
+#newGame {
   display: flex;
   justify-content: center;
   height: 3em;
@@ -40,9 +40,9 @@ table {
   border: none;
 }
 
-.newGame:hover {background-color:	#008B8B}
+#newGame:hover {background-color:	#008B8B}
 
-.newGame:active {
+#newGame:active {
   background-color:	#008B8B;
   box-shadow: 0 0.5em #666;
   transform: translateY(4px);
